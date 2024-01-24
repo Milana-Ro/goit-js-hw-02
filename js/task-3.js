@@ -1,14 +1,21 @@
 "use strict";
 
+// function checkForSpam(message) {
+//   const messageToLowerCase = message.toLowerCase();
+//   if (messageToLowerCase.includes("spam")) {
+//     return true;
+//   } else if (messageToLowerCase.includes("sale")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
 function checkForSpam(message) {
   const messageToLowerCase = message.toLowerCase();
-  if (messageToLowerCase.includes("spam")) {
-    return true;
-  } else if (messageToLowerCase.includes("sale")) {
-    return true;
-  } else {
-    return false;
-  }
+  return (
+    messageToLowerCase.includes("spam") || messageToLowerCase.includes("sale")
+  );
 }
 
 console.log(checkForSpam("Latest technology news")); // false
